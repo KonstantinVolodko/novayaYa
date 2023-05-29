@@ -1,0 +1,89 @@
+header {
+    position: fixed;
+    transition: all 0.2s linear;
+    width: 100%;
+    z-index: 10;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.9rem;
+
+        li {
+            a {
+                font-weight: 600;
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: #393837;
+                text-shadow: 0rem 0rem 0.2rem rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.header-content {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.89) 10.69%, rgba(255, 255, 255, 0.52) 55.3%, rgba(215, 215, 215, 0) 97.2%);
+
+    .header-content__btnsContainer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+
+        .header-content__logo {
+            svg {
+                width: 50rem;
+                height: 10rem;
+            }
+        }
+
+        .header-content__iconsContainer {
+            display: flex;
+            gap: 2.4rem;
+            position: absolute;
+            right: 0;
+            top: 11%;
+
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+
+            .header-content__basketIco {
+                position: relative;
+
+                .header-content__basketIcoCount {
+                    position: absolute;
+                    width: 2rem;
+                    height: 2rem;
+                    background: #FE4947;
+                    border-radius: 7.2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: -33%;
+                    bottom: -26%;
+
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #F4F2ED;
+
+                }
+            }
+        }
+    }
+}
+
+.header-padding {
+    padding-left: 21rem;
+    padding-right: 21rem;
+    padding-top: 2.6rem;
+    padding-bottom: 5rem;
+}

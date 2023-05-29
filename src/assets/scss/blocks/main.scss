@@ -1,0 +1,407 @@
+.main-swiper {
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        h2 {
+            position: absolute;
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 8.2rem;
+            line-height: 110%;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #FFFFFF;
+            text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+            bottom: 14.2rem;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: 4rem !important;
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+
+        .swiper-pagination-bullet {
+            background: #F4F2ED;
+            margin: 0 !important;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}
+
+.main-announcement {
+
+    h2 {
+        font-weight: 600;
+        font-size: 4.5rem;
+        line-height: 110%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #4F4A45;
+    }
+
+    a {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #785D4C;
+        text-decoration: none;
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: #FE6776;
+            transition: all 0.2s linear;
+        }
+    }
+
+    .main-announcement__content_first {
+        display: flex;
+        justify-content: space-between;
+
+        .main-announcement__text {
+            width: 34%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 17rem;
+            padding-left: 25.7rem;
+            gap: 2rem;
+        }
+
+        .main-announcement__imgContainer {
+            width: 66%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .main-announcement__content_second {
+        display: flex;
+        justify-content: space-between;
+
+        .main-announcement__text {
+            width: 38%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 14.6rem;
+            padding-right: 23.5rem;
+            gap: 2rem;
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .main-announcement__imgContainer {
+            width: 73%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .main-announcement__content_third {
+        display: flex;
+        justify-content: space-between;
+
+        .main-announcement__text {
+            width: 36%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 17.9rem;
+            padding-left: 25rem;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .main-announcement__imgContainer {
+            width: 73%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.main-recommendations {
+    padding-top: 9rem;
+    padding-left: 2rem;
+    padding-right: 0.8rem;
+    padding-bottom: 1.6rem;
+    background: #F4F2ED;
+
+    h2 {
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 6.2rem;
+        line-height: 110%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #4F4A45;
+    }
+
+    .main-recommendations__swiper {
+        margin-top: 3.9rem;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+            row-gap: 2.3rem;
+
+            li {
+                flex-shrink: unset;
+                padding-left: 1.2rem;
+                padding-right: 1.5rem;
+                padding-bottom: 2.4rem;
+                border-radius: 0.6rem;
+                width: 22.32%;
+                transition: all 0.2s linear;
+                position: relative;
+                background: #FFFFFF;
+
+                svg {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    position: absolute;
+                    bottom: 5.5%;
+                    right: 6%;
+                }
+                
+                &:hover {
+                    filter: drop-shadow(0rem 0.4rem 1rem rgba(79, 73, 69, 0.2));
+                    transition: all 0.2s linear;
+                }
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
+
+                .main-recommendations__imgContainer {
+                    width: 100%;
+                    padding-top: 0.8rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                p {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                    text-align: center;
+                    color: #4F4A45;
+                    margin-top: 0.4rem;
+                }
+
+                .main-recommendations__btnContainer {
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.8rem;
+
+                    button {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        border-radius: 50%;
+                        border: none;
+                        padding: 0rem;
+                    }
+
+                    button:first-child {
+                        background: #EDEDED;
+                    }
+
+                    button:last-child {
+                        background: #F5E3BF;
+                    }
+                }
+
+                .main-recommendations__priceContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .main-recommendations__oldPrice {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                        text-decoration-line: line-through;
+                        color: #D0D0D0;
+                    }
+
+                    .main-recommendations__actualPrice {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        line-height: 2.2rem;
+                        color: #4F4A45;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-advantages {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 8.2rem;
+    padding-bottom: 9.4rem;
+
+    h2 {
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 6.2rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #4F4A45;
+        text-align: center;
+    }
+
+    ul {
+        margin-top: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.6rem;
+        row-gap: 3.4rem;
+        justify-content: center;
+
+        li {
+            display: flex;
+            gap: 2.4rem;
+            width: 32.54%;
+            align-items: center;
+
+            svg {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            p {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 2.8rem;
+                line-height: 3.2rem;
+                display: flex;
+                align-items: center;
+                color: #4F4A45;
+            }
+        }
+    }
+}
+
+.main-aboutUs {
+
+    .main-aboutUs__content {
+        display: flex;
+        gap: 5rem;
+        background: #F4F2ED;
+
+        .main-aboutUs__imgContainer {
+            width: 49.5%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .main-aboutUs__textContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            width: 43.125%;
+
+            h2 {
+                font-family: 'Playfair Display';
+                font-weight: 400;
+                font-size: 6.2rem;
+                line-height: 110%;
+                text-transform: uppercase;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                color: #4F4A45;
+            }
+
+            p {
+                font-family: 'Manrope';
+                font-weight: 400;
+                font-size: 2.8rem;
+                line-height: 3.2rem;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #4F4A45;
+            }
+
+            
+        }
+    }
+}
+
+.main-aboutUs__arrowBtn {
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    color: #4F4A45;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    svg {
+        width: 4rem;
+        height: 4rem;
+    }
+}
