@@ -1,0 +1,54 @@
+.aboutCompany {
+
+    margin-top: 4rem;
+
+    @include breakpoint($lb-bp) {
+        margin-top: 0rem;
+    }
+
+    .main-aboutUs_material {
+        flex-flow: row-reverse;
+        gap: 12.1rem;
+
+        @include breakpoint($xl-bp) {
+            flex-direction: column-reverse;
+            gap: 3.2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .main-aboutUs__imgContainer {
+            width: 41.313%;
+
+            @include breakpoint($xl-bp) {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
+        }
+
+        .main-aboutUs__textContainer {
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+
+            @include breakpoint($xl-bp) {
+                padding-top: 3.2rem;
+                padding-bottom: 0rem;
+            }
+
+            @include breakpoint($lb-bp) {
+                padding-top: 0rem;
+                padding-left: 0rem;
+                padding-right: 0rem;
+            }
+        }
+    }
+}

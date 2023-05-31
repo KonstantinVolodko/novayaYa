@@ -1,14 +1,14 @@
 .main-swiper {
 
-    .swiper-slide {
+    li {
         position: relative;
         display: flex;
         justify-content: center;
 
-        img {
+        picture, img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
         }
 
         h2 {
@@ -24,6 +24,15 @@
             color: #FFFFFF;
             text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
             bottom: 14.2rem;
+
+            @include breakpoint($lb-bp) {
+                font-size: 3.2rem;
+                bottom: 6rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                bottom: 4rem;
+            }
         }
     }
 
@@ -32,6 +41,10 @@
         display: flex;
         justify-content: center;
         gap: 1.2rem;
+
+        @include breakpoint($lb-bp) {
+            bottom: 2rem !important;
+        }
 
         .swiper-pagination-bullet {
             background: #F4F2ED;
@@ -52,6 +65,14 @@
         text-transform: uppercase;
         font-feature-settings: 'pnum' on, 'lnum' on;
         color: #4F4A45;
+
+        @include breakpoint($lb-bp) {
+            font-size: 3rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+        }
     }
 
     a {
@@ -65,6 +86,14 @@
         text-decoration: none;
         transition: all 0.2s linear;
 
+        @include breakpoint($lb-bp) {
+            font-size: 1.6rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.2rem;
+        }
+
         &:hover {
             color: #FE6776;
             transition: all 0.2s linear;
@@ -74,22 +103,55 @@
     .main-announcement__content_first {
         display: flex;
         justify-content: space-between;
+        position: relative;
 
         .main-announcement__text {
-            width: 34%;
+            width: 20%;
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 17rem;
-            padding-left: 25.7rem;
+            position: absolute;
+            // padding-top: 17rem;
+            // padding-left: 25.7rem;
+            // padding-bottom: 13.2%;
             gap: 2rem;
+            z-index: 1;
+            top: 17rem;
+            left: 25.5rem;
+
+            // @include breakpoint($ssh-bp) {
+            //     padding-bottom: 10.66%;
+            // }
+
+            @include breakpoint($xl-bp) {
+                width: 29%;
+                top: 8rem;
+                left: 7.5rem;
+            }
+
+            @include breakpoint($lb-bp) {
+                gap: 0.5rem;
+                top: 11rem;
+                left: 3.5rem;
+            }
+            
+            @include breakpoint($sm-bp) {
+                width: 38%;
+                top: 6rem;
+                left: 2rem;
+            }
+
         }
 
         .main-announcement__imgContainer {
-            width: 66%;
+            width: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // z-index: 0;
 
-            img {
+            img, picture {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -100,16 +162,45 @@
     .main-announcement__content_second {
         display: flex;
         justify-content: space-between;
+        position: relative;
 
         .main-announcement__text {
-            width: 38%;
+            width: 20%;
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 14.6rem;
-            padding-right: 23.5rem;
+            // padding-top: 14.6rem;
+            // padding-right: 19.5rem;
+            // padding-bottom: 11.9%;
+            margin-left: auto;
             gap: 2rem;
+            position: absolute;
+            z-index: 1;
+            top: 14.5rem;
+            right: 23rem;
+
+            // @include breakpoint($ssh-bp) {
+            //     padding-bottom: 9.03%;
+            // }
+
+            @include breakpoint($xl-bp) {
+                width: 32%;
+                top: 8rem;
+                right: 4rem;
+            }
+            
+            @include breakpoint($lb-bp) {
+                gap: 0.5rem;
+                top: 11rem;
+                right: 3.5rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 38%;
+                top: 5rem;
+                right: 0.5rem;
+            }
 
             h2 {
                 text-align: center;
@@ -117,9 +208,11 @@
         }
 
         .main-announcement__imgContainer {
-            width: 73%;
+            width: 100%;
+            // position: absolute;
+            // z-index: 0;
 
-            img {
+            img, picture {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -130,22 +223,52 @@
     .main-announcement__content_third {
         display: flex;
         justify-content: space-between;
+        position: relative;
 
         .main-announcement__text {
-            width: 36%;
+            width: 20%;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            padding-top: 17.9rem;
-            padding-left: 25rem;
+            // padding-top: 17rem;
+            // padding-left: 22.3rem;
+            // padding-bottom: 13.3%;
             align-items: center;
             gap: 2rem;
+            position: absolute;
+            z-index: 1;
+            top: 17rem;
+            left: 25.4rem;
+
+            // @include breakpoint($ssh-bp) {
+            //     padding-bottom: 10.12%;
+            // }
+
+            @include breakpoint($xl-bp) {
+                width: 30%;
+                top: 8rem;
+                left: 7.5rem;
+            }
+            
+            @include breakpoint($lb-bp) {
+                gap: 0.5rem;
+                top: 11rem;
+                left: 3.5rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 39%;
+                top: 6rem;
+                left: 2rem;
+            }
         }
 
         .main-announcement__imgContainer {
-            width: 73%;
+            width: 100%;
+            // position: absolute;
+            // z-index: 0;
 
-            img {
+            img, picture {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -161,6 +284,15 @@
     padding-bottom: 1.6rem;
     background: #F4F2ED;
 
+    @include breakpoint($lb-bp) {
+        padding-top: 3.2rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     h2 {
         font-family: 'Playfair Display';
         font-weight: 400;
@@ -171,10 +303,18 @@
         text-transform: uppercase;
         font-feature-settings: 'pnum' on, 'lnum' on;
         color: #4F4A45;
+
+        @include breakpoint($lb-bp) {
+            font-size: 2.8rem;
+        }
     }
 
     .main-recommendations__swiper {
         margin-top: 3.9rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 2.4rem;
+        }
 
         ul {
             display: flex;
@@ -182,109 +322,40 @@
             column-gap: 2rem;
             row-gap: 2.3rem;
 
+            @include breakpoint($xl-bp) {
+                flex-wrap: unset;
+                column-gap: unset;
+                row-gap: unset;
+            }
+
             li {
                 flex-shrink: unset;
-                padding-left: 1.2rem;
-                padding-right: 1.5rem;
-                padding-bottom: 2.4rem;
-                border-radius: 0.6rem;
-                width: 22.32%;
-                transition: all 0.2s linear;
-                position: relative;
-                background: #FFFFFF;
-
-                svg {
-                    width: 2.4rem;
-                    height: 2.4rem;
-                    position: absolute;
-                    bottom: 5.5%;
-                    right: 6%;
-                }
-                
-                &:hover {
-                    filter: drop-shadow(0rem 0.4rem 1rem rgba(79, 73, 69, 0.2));
-                    transition: all 0.2s linear;
-                }
-
-                a {
-                    text-decoration: none;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1.5rem;
-                }
-
-                .main-recommendations__imgContainer {
-                    width: 100%;
-                    padding-top: 0.8rem;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
-                }
-
-                p {
-                    font-family: 'Inter';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 1.8rem;
-                    line-height: 2.2rem;
-                    text-align: center;
-                    color: #4F4A45;
-                    margin-top: 0.4rem;
-                }
-
-                .main-recommendations__btnContainer {
-                    display: flex;
-                    justify-content: center;
-                    gap: 0.8rem;
-
-                    button {
-                        width: 1.6rem;
-                        height: 1.6rem;
-                        border-radius: 50%;
-                        border: none;
-                        padding: 0rem;
-                    }
-
-                    button:first-child {
-                        background: #EDEDED;
-                    }
-
-                    button:last-child {
-                        background: #F5E3BF;
-                    }
-                }
-
-                .main-recommendations__priceContainer {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-
-                    .main-recommendations__oldPrice {
-                        font-family: 'Inter';
-                        font-style: normal;
-                        font-weight: 300;
-                        font-size: 1.6rem;
-                        line-height: 1.9rem;
-                        text-decoration-line: line-through;
-                        color: #D0D0D0;
-                    }
-
-                    .main-recommendations__actualPrice {
-                        font-family: 'Inter';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 1.8rem;
-                        line-height: 2.2rem;
-                        color: #4F4A45;
-                    }
+                width: 24%;
+                @include breakpoint($xl-bp) {
+                    flex-shrink: 0;
+                    width: none;
                 }
             }
+
+            
+        }
+
+        .recommendations-swiper-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            .swiper-pagination-bullet {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #785D4C;
+            }   
         }
     }
+
 }
 
 .main-advantages {
@@ -292,6 +363,17 @@
     padding-right: 2rem;
     padding-top: 8.2rem;
     padding-bottom: 9.4rem;
+    background: #FFFFFF;
+
+    @include breakpoint($lb-bp) {
+        padding-top: 5.6rem;
+        padding-bottom: 5.5rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
     h2 {
         font-family: 'Playfair Display';
@@ -302,6 +384,10 @@
         font-feature-settings: 'pnum' on, 'lnum' on;
         color: #4F4A45;
         text-align: center;
+
+        @include breakpoint($lb-bp) {
+            font-size: 2.8rem;
+        }
     }
 
     ul {
@@ -312,15 +398,44 @@
         row-gap: 3.4rem;
         justify-content: center;
 
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+            row-gap: 1.6rem;
+        }
+
         li {
             display: flex;
             gap: 2.4rem;
             width: 32.54%;
             align-items: center;
 
+            @include breakpoint($xl-bp) {
+                width: 50%;
+            }
+            
+            @include breakpoint($lb-bp) {
+                flex-direction: column;
+                gap: 1.2rem;
+                width: 70%;
+            }
+
+            // @include breakpoint($sm-bp) {
+            //     width: 100%;
+            // }
+
             svg {
                 width: 6rem;
                 height: 6rem;
+
+                @include breakpoint($lb-bp) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+
+            .advantages3 {
+                width: 12rem;
+                fill: #AEA896;
             }
 
             p {
@@ -332,6 +447,19 @@
                 display: flex;
                 align-items: center;
                 color: #4F4A45;
+
+                @include breakpoint($lb-bp) {
+                    text-align: center;
+                }
+
+                @include breakpoint($lb-bp) {
+                    font-size: 2.2rem;
+                    line-height: 2.2rem;
+                }
+
+                @include breakpoint($sm-bp) {
+                    font-size: 1.8rem;
+                }
             }
         }
     }
@@ -344,13 +472,25 @@
         gap: 5rem;
         background: #F4F2ED;
 
+
+
+        @include breakpoint($lb-bp) {
+            padding-top: 3.2rem;
+            flex-direction: column-reverse;
+            gap: 2rem;
+        }
+
         .main-aboutUs__imgContainer {
             width: 49.5%;
+
+            @include breakpoint($xl-bp) {
+                width: 100%;
+            }  
 
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
@@ -362,6 +502,20 @@
             gap: 4rem;
             width: 43.125%;
 
+            @include breakpoint($xl-bp) {
+                gap: 2rem;
+                width: 100%;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+            }
+
             h2 {
                 font-family: 'Playfair Display';
                 font-weight: 400;
@@ -370,6 +524,10 @@
                 text-transform: uppercase;
                 font-feature-settings: 'pnum' on, 'lnum' on;
                 color: #4F4A45;
+
+                @include breakpoint($lb-bp) {
+                    font-size: 2.8rem;
+                }
             }
 
             p {
@@ -381,9 +539,144 @@
                 align-items: center;
                 text-align: center;
                 color: #4F4A45;
+
+                @include breakpoint($lb-bp) {
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                }
             }
 
             
+        }
+    }
+}
+
+.catalog-item {
+    flex-shrink: unset;
+    padding-left: 1.2rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.4rem;
+    border-radius: 0.6rem;
+    transition: all 0.2s linear;
+    position: relative;
+    background: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include breakpoint($xl-bp) {
+        margin-right: 2rem;
+    }
+    
+    @include breakpoint($sm-bp) {
+        margin-right: 1.6rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.8rem;
+        gap: 1rem;
+    }
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        position: absolute;
+        bottom: 5.5%;
+        right: 6%;
+    }
+    
+    &:hover {
+        filter: drop-shadow(0rem 0.4rem 1rem rgba(79, 73, 69, 0.2));
+        transition: all 0.2s linear;
+    }
+
+    
+        
+    
+
+    .main-recommendations__imgContainer {
+        width: 100%;
+        padding-top: 0.8rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        text-align: center;
+        color: #4F4A45;
+        margin-top: 0.4rem;
+
+        @include breakpoint($lb-bp) {
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    .main-recommendations__btnContainer {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+
+        button {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            border: none;
+            padding: 0rem;
+        }
+
+        button:first-child {
+            background: #EDEDED;
+        }
+
+        button:last-child {
+            background: #F5E3BF;
+        }
+    }
+
+    .main-recommendations__priceContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.3rem;
+        }
+
+        .main-recommendations__oldPrice {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            text-decoration-line: line-through;
+            color: #D0D0D0;
+        }
+
+        .main-recommendations__actualPrice {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: #4F4A45;
         }
     }
 }
@@ -399,6 +692,10 @@
     display: flex;
     align-items: center;
     gap: 1.8rem;
+
+    @include breakpoint($sm-bp) {
+        font-size: 1.2rem;
+    }
 
     svg {
         width: 4rem;

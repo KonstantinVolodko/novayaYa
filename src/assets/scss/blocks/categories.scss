@@ -1,0 +1,107 @@
+.breadCrumbs {
+    padding-top: 4rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 0.6rem;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: #AAA49E;
+
+    @include breakpoint($lb-bp) {
+        padding-top: 1rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        padding-left: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: #AAA49E;
+    }
+
+    p {
+        color: #4F4A45;
+    }
+}
+
+.categories {
+
+    .categories-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        margin-top: 4rem;
+
+        @include breakpoint($lb-bp) {
+            margin-top: 1.6rem;
+        }
+
+        li {
+            height: 43.2rem;
+            width: 49.48%;
+            border-radius: 0.6rem;
+            overflow: hidden;
+
+            @include breakpoint($xl-bp) {
+                width: 49.1%;
+            }
+
+            @include breakpoint($lb-bp) {
+                width: 100%;
+                height: 34.2rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                height: 18.2rem;
+            }
+            
+
+            a {
+                text-decoration: none;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: block;
+                
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                h2 {
+                    font-weight: 600;
+                    font-size: 4.5rem;
+                    line-height: 110%;
+                    letter-spacing: 0.04em;
+                    text-transform: uppercase;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: #4F4A45;
+                    text-shadow: 0px 0px 0.2rem rgba(255, 255, 255, 0.8);
+                    z-index: 2;
+                    position: absolute;
+                    bottom: 4rem;
+                    left: 4rem;
+
+                    @include breakpoint($lb-bp) {
+                        bottom: 2rem;
+                        left: 2rem;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 3.2rem;
+                        bottom: 1.2rem;
+                        left: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
