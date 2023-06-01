@@ -1,0 +1,106 @@
+.personalArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    @include breakpoint($sm-bp) {
+        margin-top: 1.6rem;
+    }
+
+    form {
+        width: 56%;
+        margin: 4rem auto 0;
+
+        @include breakpoint($xl-bp) {
+            width: 87%;
+        }
+
+        @include breakpoint($lb-bp) {
+            width: 100%;
+            padding: 0 2rem;
+            margin-top: 3.2rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            padding: 0 1rem;
+        }
+
+        button {
+            margin-top: 1.5rem;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            display: flex;
+            align-items: center;
+            color: #FE6776;
+            border: none;
+            padding: 0rem;
+            background: none;
+
+            @include breakpoint($lb-bp) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .personalArea-content {
+            display: flex;
+            column-gap: 2.4rem;
+            row-gap: 3.8rem;
+            flex-wrap: wrap;
+
+            @include breakpoint($lb-bp) {
+                gap: 2.6rem;
+            }
+
+            input {
+                border: 0.1rem solid #AAA49E;
+                border-radius: 0.6rem;
+                background: none;
+                outline: none;
+                padding: 1.5rem 1.6rem;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                display: flex;
+                align-items: center;
+                color: #4F4A45;
+                width: 43rem;
+
+                @include breakpoint($lb-bp) {
+                    width: 100%;
+                }
+
+                @include breakpoint($sm-bp) {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+
+        .personalArea-content__saveBtn {
+            background: #E6DAD3;
+            border-radius: 0.6rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #F4F2ED;
+            width: 43rem;
+            display: flex;
+            justify-content: center;
+            padding: 1.6rem 0;
+            margin-top: 0rem;
+
+            @include breakpoint($lb-bp) {
+                width: 100%;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,161 @@
+.delivery {
+    padding-left: 15.1rem;
+    padding-right: 15.1rem;
+    margin-top: 4rem;
+
+    @include breakpoint($xl-bp) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include breakpoint($lb-bp) {
+        margin-top: 2.4rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .delivery-description__title {
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        display: flex;
+        align-items: center;
+        color: #4F4A45;
+
+        @include breakpoint($sm-bp) {
+            font-size: 2.4rem;
+            line-height: 120%;
+        }
+    }
+
+    .delivery-description {
+        margin-top: 4rem;
+        display: flex;
+        gap: 1.6rem;
+
+        @include breakpoint($lb-bp) {
+            margin-top: 2.4rem;
+            flex-direction: column;
+        }
+        
+        .delivery-description__text {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 50%;
+
+            @include breakpoint($lb-bp) {
+                width: 100%;
+                gap: 1.2rem;
+            }
+
+            .delivery-description__subtitle {
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                color: #4F4A45;
+
+                @include breakpoint($sm-bp) {
+                    line-height: 145%;
+                }
+            }
+        }
+    }
+
+    .delivery-waysOfDelivery {
+        margin-top: 4rem;
+
+        @include breakpoint($lb-bp) {
+            margin-top: 2.4rem;
+        }
+
+        .delivery-waysOfDelivery__container {
+            margin-top: 3.2rem;
+            display: flex;
+            gap: 1.6rem;
+
+            @include breakpoint($lb-bp) {
+                margin-top: 2.4rem;
+                flex-direction: column;
+                gap: 2.4rem;
+            }
+
+            ul {
+                padding: 3.2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                background: #FFFFFF;
+                border-radius: 0.6rem;
+                width: 50%;
+
+                @include breakpoint($lb-bp) {
+                    width: 100%;
+                }
+
+                @include breakpoint($sm-bp) {
+                    padding: 2.4rem;
+                }
+
+                li {
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: #4F4A45;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 1.4rem;
+                        line-height: 145%;
+                    }
+                }
+
+                .delivery-waysOfDelivery__listTitle {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.2rem;
+
+                    svg {
+                        width: 8.7rem;
+                        height: 4.3rem;
+                    }
+
+                    font-weight: 600;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: #4F4A45;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 1.8rem;
+                        line-height: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .delivery-remark {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #4F4A45;
+        margin-top: 4rem;
+        width: 49.384%;
+
+        @include breakpoint($lb-bp) {
+            width: 100%;
+            margin-top: 2.4rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+            line-height: 145%;
+        }
+    }
+}

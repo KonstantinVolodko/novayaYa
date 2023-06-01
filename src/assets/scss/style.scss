@@ -65,10 +65,12 @@ svg {
 .pageContainer {
   padding-left: 2rem;
   padding-right: 2rem;
+  margin-top: 4rem;
 
   @include breakpoint($sm-bp) {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 1.6rem
   }
 }
 
@@ -80,3 +82,6 @@ svg {
 @import './blocks/catalog.scss';
 @import './blocks/aboutCompany.scss';
 @import './blocks/contacts.scss';
+@import './blocks/delivery.scss';
+@import './blocks/collection.scss';
+@import './blocks/personalArea.scss';
