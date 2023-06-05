@@ -9,6 +9,7 @@
 
         li {
             width: 24.23%;
+            position: relative;
 
             @include breakpoint($xl-bp) {
                 width: 32.24%;

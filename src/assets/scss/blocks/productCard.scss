@@ -6,11 +6,25 @@
     display: flex;
     gap: 6.5rem;
 
+    @include breakpoint($xl-bp) {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
     .productCard-content__gallery {
         overflow: hidden;
         display: flex;
         width: 46.347%;
         height: 55.2rem;
+
+        @include breakpoint($xl-bp) {
+            width: 100%;
+        }
+
+        @include breakpoint($sm-bp) {
+            flex-direction: column-reverse;
+            gap: 3.6rem;
+        }
     }
 
     .thumbnails {
@@ -24,6 +38,11 @@
             overflow: hidden;
             margin-bottom: 1rem;
             width: 13rem;
+
+            @include breakpoint($sm-bp) {
+                width: 8rem;
+                height: 8rem;
+            }
         }
 
         .swiper-slide-thumb-active {
@@ -65,6 +84,15 @@
         gap: 5.2rem;
         width: 32%;
 
+        @include breakpoint($xl-bp) {
+            width: 100%;
+            gap: 3rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            gap: 2rem;
+        }
+
         .productCard-content__text {
             display: flex;
             flex-direction: column;
@@ -77,6 +105,10 @@
                 letter-spacing: 0.04em;
                 font-feature-settings: 'pnum' on, 'lnum' on;
                 color: #4F4A45;
+
+                @include breakpoint($sm-bp) {
+                    font-size: 2.4rem;
+                }
             }
 
             .productCard-content__priceContainer {
@@ -91,6 +123,10 @@
                     text-transform: uppercase;
                     font-feature-settings: 'pnum' on, 'lnum' on;
                     color: #4F4A45;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 2rem;
+                    }
                 }
 
                 .productCard-content__oldPrice {
@@ -102,6 +138,10 @@
                     text-transform: uppercase;
                     font-feature-settings: 'pnum' on, 'lnum' on;
                     color: #AAA49E;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 2rem;
+                    }
                 }
 
                 .productCard-content__salePrice {
@@ -111,6 +151,10 @@
                     font-size: 2.4rem;
                     line-height: 2.9rem;
                     color: #AAA49E;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 2rem;
+                    }
                 }
             }
         }
@@ -184,6 +228,8 @@
                         font-size: 1.6rem;
                         line-height: 2.2rem;
                         color: #4F4A45;
+                        min-width: 2rem;
+                        text-align: center;
                     }
                 }
 
@@ -193,6 +239,10 @@
                     line-height: 2.2rem;
                     text-align: center;
                     color: #979797;
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
@@ -210,6 +260,10 @@
             border-radius: 0.6rem;
             padding: 1.6rem 3.2rem;
             width: 53%;
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
         }
 
         .productCard-content__paramsContainer {
@@ -236,6 +290,10 @@
                 line-height: 2.2rem;
                 color: #4F4A45;
                 width: 64.71%;
+
+                @include breakpoint($sm-bp) {
+                    width: 44.71%;
+                }
             }
         }
     }
@@ -244,6 +302,10 @@
 
 .additive {
     margin-top: 8rem;
+
+    @include breakpoint($xl-bp) {
+        margin-top: 4rem;
+    }
 
     h2 {
         text-align: center;
@@ -266,6 +328,10 @@
             border: none;
             top: 50%;
             transform: translate(0, -50%);
+
+            @include breakpoint($xl-bp) {
+                display: none;
+            }
             
 
             svg {
