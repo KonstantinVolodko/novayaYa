@@ -201,50 +201,6 @@
                     }
                 }
             }
-
-            .productCard-content__countContainer {
-                display: flex;
-                flex-direction: column;
-                gap: 0.2rem;
-                justify-content: end;
-
-                .productCard-content__coutn {
-                    border: 0.1rem solid #979797;
-                    border-radius: 0.2rem;
-                    display: flex;
-                    align-items: center;
-                    padding: 0.6rem;
-                    gap: 1.45rem;
-
-                    button {
-                        background: none;
-                        border: none;
-                        color: #979797;
-                        font-size: 2rem;
-                    }
-
-                    p {
-                        font-weight: 400;
-                        font-size: 1.6rem;
-                        line-height: 2.2rem;
-                        color: #4F4A45;
-                        min-width: 2rem;
-                        text-align: center;
-                    }
-                }
-
-                .productCard-content__coutnDescription {
-                    font-weight: 400;
-                    font-size: 1.6rem;
-                    line-height: 2.2rem;
-                    text-align: center;
-                    color: #979797;
-
-                    @include breakpoint($sm-bp) {
-                        font-size: 1.4rem;
-                    }
-                }
-            }
         }
 
         .productCard-content__addBtn {
@@ -295,6 +251,50 @@
                     width: 44.71%;
                 }
             }
+        }
+    }
+}
+
+.productCard-content__countContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: end;
+
+    .productCard-content__coutn {
+        border: 0.1rem solid #979797;
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        padding: 0.6rem;
+        gap: 1.45rem;
+
+        button {
+            background: none;
+            border: none;
+            color: #979797;
+            font-size: 2rem;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: #4F4A45;
+            min-width: 2rem;
+            text-align: center;
+        }
+    }
+
+    .productCard-content__coutnDescription {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        text-align: center;
+        color: #979797;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.4rem;
         }
     }
 }
