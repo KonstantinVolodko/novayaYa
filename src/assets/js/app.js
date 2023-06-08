@@ -176,23 +176,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    let countContainer = document.querySelector('.productCard-content__coutn');
-    let numberParagraph = countContainer.querySelector('p');
+    let countContainer = document.querySelectorAll('.productCard-content__coutn');
 
-    let number = 1;
-
-    countContainer.addEventListener('click', function (event) {
-        if (event.target.tagName === 'BUTTON') {
-            if (event.target.textContent === '-') {
-                if (number > 1) {
-                    number--;
+    countContainer.forEach(e => {
+        let numberParagraph = e.querySelector('p');
+        let number = 1;
+        e.addEventListener('click', function (event) {
+            if (event.target.tagName === 'BUTTON') {
+                if (event.target.textContent === '-') {
+                    if (number > 1) {
+                        number--;
+                    }
+                } else if (event.target.textContent === '+') {
+                    number++;
                 }
-            } else if (event.target.textContent === '+') {
-                number++;
+                numberParagraph.textContent = number;
             }
-            numberParagraph.textContent = number;
-        }
-    });
+        });
+    })
 })
 
 
