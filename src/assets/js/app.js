@@ -194,6 +194,22 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     })
+
+    let shippingMethods = document.querySelectorAll('.postOffice-items__shippingMethods')
+    shippingMethods.forEach(e => {
+        let shippingMethodsBtns = e.querySelectorAll('.postOffice-items__radio')
+        let shippingMethodsHelper = e.querySelector('.postOffice-items__helperContaiener')
+        shippingMethodsBtns.forEach(el => {
+            el.addEventListener('click', () => {
+                shippingMethodsBtns.forEach(elem => {
+                    elem.classList.remove('btnTabActive')
+                })
+                el.classList.add('btnTabActive')
+                shippingMethodsHelper.innerHTML = el.nextElementSibling.innerHTML
+            })
+        })
+    })
+
 })
 
 

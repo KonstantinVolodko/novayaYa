@@ -1,0 +1,176 @@
+<div class="breadCrumbs">
+    <a href="#">Главная</a>
+    /
+    <a href="#">Корзина</a>
+    /
+    <p>Оформление заказа</p>
+</div>
+
+<section class="postOffice pageContainer">
+    <h2>Оформление заказа</h2>
+
+    <div class="postOffice-items">
+        <div class="postOffice-items__container basket-items_width">
+            <div class="postOffice-items__deliveryList">
+                <p class="postOffice-items__title">Служба доставки</p>
+                <div class="postOffice-items__deliveryList_content">
+                    <div class="postOffice-items__radio">
+                        <input class="postOffice-items__custom-radio" type="radio" id="pochtaRoss" name="postOffice"
+                            value="Почта России">
+                        <label for="pochtaRoss">
+                            <svg>
+                                <use href="#pochtaRossii"></use>
+                            </svg>
+                            <span>Почта России</span>
+                        </label>
+                    </div>
+                    <div class="postOffice-items__radio">
+                        <input class="postOffice-items__custom-radio" type="radio" id="CDEK" name="postOffice"
+                            value="СДЭК">
+                        <label for="CDEK">
+                            <svg>
+                                <use href="#cdek"></use>
+                            </svg>
+                            <span>СДЭК</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postOffice-items__shippingMethods">
+                <p class="postOffice-items__title">Способ доставки</p>
+                <ul>
+                    <li>
+                        <!-- <button>Отделение Почты России</button> -->
+                        <div class="postOffice-items__radio">
+                            <input class="postOffice-items__custom-radio" type="radio" id="pochta" name="shippingMethods" value="pochta">
+                            <label for="pochta">Отделение Почты России</label>
+                        </div>
+                        
+                        <div class="postOffice-items__tabContent">
+                            <form action="#">
+                                <input type="text" placeholder="Город" name="city">
+                                <input type="text" placeholder="Улица" name="street">
+                                <input type="text" placeholder="Дом / Квартира" name="flat">
+                                <input type="text" placeholder="Индекс" name="index">
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <button>Почтомат</button> -->
+                        <div class="postOffice-items__radio">
+                            <input class="postOffice-items__custom-radio" type="radio" id="pochtomat" name="shippingMethods" value="Почтомат">
+                            <label for="pochtomat">Почтомат</label>
+                        </div>
+                        <div class="postOffice-items__tabContent">
+                            <iframe
+                                src="https://yandex.by/map-widget/v1/?ll=27.575404%2C53.889145&mode=poi&poi%5Bpoint%5D=27.560268%2C53.895147&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1289072121&z=14.3" frameborder="1" allowfullscreen="true"
+                                style="position:relative;">
+                            </iframe>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <button>Курьерская служба EMS</button> -->
+                        <div class="postOffice-items__radio">
+                            <input class="postOffice-items__custom-radio" type="radio" id="EMS" name="shippingMethods" value="EMS">
+                            <label for="EMS">Курьерская служба EMS</label>
+                        </div>
+                        <div class="postOffice-items__tabContent">
+                            <form action="#">
+                                <input type="text" placeholder="Город" name="city">
+                                <input type="text" placeholder="Улица" name="street">
+                                <input type="text" placeholder="Дом / Квартира" name="flat">
+                                <input type="text" placeholder="Индекс" name="index">
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="postOffice-items__tabContainer">
+                    <div class="postOffice-items__helperContaiener"></div>
+                    <div class="postOffice-items__conditionsContainer">
+                        <div>
+                            <p class="postOffice-items__condition">Доставка:</p>
+                            <p class="postOffice-items__conditionContent">4-6 дней</p>
+                        </div>
+
+                        <div>
+                            <p class="postOffice-items__condition">Стоимость:</p>
+                            <p class="postOffice-items__conditionContent">299 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postOffice-items__personalData">
+                <p class="postOffice-items__title">Служба доставки</p>
+                <form action="#">
+                    <input type="text" placeholder="Иван" name="name">
+                    <input type="text" placeholder="Фамилия" name="secondName">
+                    <input type="tel" placeholder="+7 (999) 999-99-99" name="phone">
+                    <input type="email" placeholder="E-mail" name="email">
+                    <textarea name="comment" placeholder="Комментарий"></textarea>
+                </form>
+            </div>
+        </div>
+
+        <div class="basket-order__container">
+            <div class="basket-order__stickyHelper">
+                <div class="basket-order__params">
+                    <ul>
+                        <li>
+                            <p>Тип цены</p>
+                            <p>Розничная</p>
+                        </li>
+                        <li>
+                            <p>4 товара на сумму</p>
+                            <p>5 200 ₽</p>
+                        </li>
+                        <li>
+                            <p>Доставка</p>
+                            <p>-</p>
+                        </li>
+                        <li>
+                            <p>Скидка</p>
+                            <p>-1 200 ₽</p>
+                        </li>
+                    </ul>
+
+                    <div class="basket-order__finalPrice">
+                        <p>Итого</p>
+                        <p>4 000 ₽</p>
+                    </div>
+
+                    <button>
+                        Оформить заказ
+                    </button>
+
+                    <div class="basket-order__agreement">
+                        <input class="basket-order__agreement_checkBox" type="checkbox" id="agreementCheckbox"
+                            name="agreement">
+                        <label for="agreementCheckbox">Согласие на обработку персональных данных</label>
+                    </div>
+
+                    <div class="basket-order__alarmContainer">
+                        <svg>
+                            <use href="#alarmIco"></use>
+                        </svg>
+
+                        <div class="basket-order__alarmText">
+                            <p>Доберите товаров на сумму 3 450 ₽ и получите оптовую цену</p>
+                            <a href="#">Пересчитать по оптовым ценам</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basket-order__delivery">
+                    <svg>
+                        <use href="#deliveryIco"></use>
+                    </svg>
+
+                    <p>Бесплатная доставка при заказе от 10 000 ₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
