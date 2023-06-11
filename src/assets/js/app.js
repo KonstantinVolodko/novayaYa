@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         breakpoints: {
             1024: {
-              slidesPerView: 4,
+                slidesPerView: 4,
             },
 
             650: {
@@ -195,20 +195,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })
 
-    let shippingMethods = document.querySelectorAll('.postOffice-items__shippingMethods')
-    shippingMethods.forEach(e => {
-        let shippingMethodsBtns = e.querySelectorAll('.postOffice-items__radio')
-        let shippingMethodsHelper = e.querySelector('.postOffice-items__helperContaiener')
-        shippingMethodsBtns.forEach(el => {
-            el.addEventListener('click', () => {
-                shippingMethodsBtns.forEach(elem => {
-                    elem.classList.remove('btnTabActive')
-                })
-                el.classList.add('btnTabActive')
-                shippingMethodsHelper.innerHTML = el.nextElementSibling.innerHTML
-            })
-        })
-    })
+    const postOfficeRadioBtn = document.querySelectorAll('.postOffice-items__radio');
+const shippingMethods = document.querySelector('.postOffice-items__shippingMethods');
+
+const handleShippingMethodClick = (e) => {
+  shippingMethods.innerHTML = e.nextElementSibling.innerHTML;
+  const shippingMethodsBtns = shippingMethods.querySelectorAll('.postOffice-items__radio_mob');
+  const shippingMethodsHelper = shippingMethods.querySelector('.postOffice-items__helperContaiener');
+
+  shippingMethodsBtns.forEach((el) => {
+    el.addEventListener('click', () => {
+      if (window.matchMedia("(min-width: 650px)").matches) {
+        shippingMethodsBtns.forEach((elem) => {
+          elem.classList.remove('btnTabActive');
+        });
+        el.classList.add('btnTabActive');
+      }
+      shippingMethodsHelper.innerHTML = el.nextElementSibling.innerHTML;
+    });
+  });
+
+  shippingMethodsBtns[0].click();
+};
+
+postOfficeRadioBtn.forEach((e, index) => {
+  const radioInput = e.querySelector('input');
+  if (index === 0) {
+    radioInput.setAttribute('checked', 'true');
+  }
+
+  e.addEventListener('click', () => {
+    handleShippingMethodClick(e);
+  });
+});
+
+postOfficeRadioBtn[0].click();
+
+
+
 
 })
 

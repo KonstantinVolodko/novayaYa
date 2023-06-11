@@ -1,0 +1,54 @@
+.emptyBasket {
+    margin-top: 4rem;
+
+    .emptyBasket-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 2.8rem;
+            line-height: 110%;
+            letter-spacing: 0.04em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #4F4A45;
+            margin-top: 4rem;
+
+            @include breakpoint($sm-bp) {
+                margin-top: 1.2rem;
+                font-size: 1.6rem;
+                line-height: 120%;
+            }
+        }
+
+        button {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #4F4A45;
+            width: 43rem;
+            padding: 1.6rem 0rem;
+            border: 0.1rem solid #785D4C;
+            border-radius: 0.6rem;
+            background: none;
+            margin-top: 4rem;
+
+            @include breakpoint($sm-bp) {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+
+                width: 32.8rem;
+            }
+        }
+    }
+}
