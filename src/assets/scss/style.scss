@@ -78,6 +78,14 @@ svg {
   }
 }
 
+.bottomMargin {
+  margin-top: 8rem;
+
+  @include breakpoint($sm-bp) {
+    margin-top: 3.2rem;
+  }
+}
+
 @import './blocks/swiper.scss';
 @import './blocks/header.scss';
 @import './blocks/footer.scss';
@@ -93,3 +101,4 @@ svg {
 @import './blocks/basket.scss';
 @import './blocks/postOffice.scss';
 @import './blocks/emptyBasket.scss';
+@import './blocks/completedOrder.scss';

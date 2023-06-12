@@ -51,7 +51,7 @@
             width: 100%;
 
             &:hover {
-                border-color:#785D4C;
+                border-color: #785D4C;
                 transition: all 0.2s linear;
             }
 
@@ -215,7 +215,7 @@
                             position: absolute;
                             z-index: -1;
                             opacity: 0;
-    
+
                             &+label {
                                 display: inline-flex;
                                 align-items: center;
@@ -225,8 +225,8 @@
                                 width: 100%;
                                 cursor: pointer;
                                 // padding: 2.6rem 2.4rem;
-                
-                
+
+
                                 span {
                                     font-weight: 600;
                                     font-size: 1.8rem;
@@ -235,7 +235,7 @@
                                     color: #4F4A45;
                                 }
                             }
-                
+
                             &+label::before {
                                 content: '';
                                 display: inline-block;
@@ -250,19 +250,19 @@
                                 background-size: 90%;
                                 transition: all 0.2s linear;
                             }
-                
+
                             &:not(:disabled):not(:checked)+label:hover::before {
                                 border-color: #785D4C;
                                 transition: all 0.2s linear;
                             }
-                
+
                             &:checked+label::before {
                                 border-color: #785D4C;
                                 background-color: #FFFFFF;
                                 transition: all 0.2s linear;
                                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23785D4C'/%3e%3c/svg%3e");
                             }
-                
+
                             &:disabled+label::before {
                                 background-color: #e9ecef;
                                 transition: all 0.2s linear;
@@ -447,5 +447,21 @@
                 height: 11.2rem;
             }
         }
+    }
+
+
+}
+
+.tabAnimation {
+    animation: tabChangeAnimation 0.4s ease;
+}
+
+@keyframes tabChangeAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

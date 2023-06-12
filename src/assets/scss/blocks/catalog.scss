@@ -4,7 +4,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1.6rem;
-
+        margin-top: 4.2rem;
 
 
         li {
@@ -35,141 +35,145 @@
         }
     }
 
-    .catalog-select {
-        position: relative;
-        width: 28rem;
-    }
-
-    .catalog-select__input {
-        position: relative;
-        height: 100%;
+    .catalog-filter {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        background: #FEFDFD;
-        border-radius: 6px;
-        cursor: pointer;
-        padding: 1.5rem 1.6rem;
+        align-items: center;
 
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 120%;
-        color: #4F4A45;
+        .catalog-filter__position {
+            display: flex;
+            align-items: center;
+            gap: 2.4rem;
+
+            .catalog-filter__closeContainer {
+                display: flex;
+                gap: 1.6rem;
+
+                .catalog-filter__closeBtn {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    background: #FEFDFD;
+                    border-radius: 3.2rem;
+                    padding: 0.5rem 1.2rem;
+                    cursor: pointer;
+        
+                    p {
+                        font-weight: 400;
+                        font-size: 1.8rem;
+                        line-height: 2.5rem;
+                        color: #4F4A45;
+                    }
+        
+                    svg {
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+
+        
+
+        .catalog-filter__clearBtn {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            text-decoration-line: underline;
+            color: #4F4A45;
+            background: none;
+            border: none;
+        }
+
     }
 
-    .catalog-selected__option {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
-    .arrow {
-        border: solid #4F4A45;
-        border-width: 0 0.1rem 0.1rem 0;
-        display: inline-block;
-        padding: 0.3rem;
-        transform: rotate(45deg);
-    }
+}
 
-    .arrow.activeArrow {
-        transform: rotate(-135deg);
-    }
+.catalog-filter__dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-    .catalog-options__container {
+.catalog-filter__dropdownBtn {
+    padding: 1.5rem 1.6rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 120%;
+    color: #4F4A45;
+    background: #FEFDFD;
+    border-radius: 0.6rem;
+    border: none;
+}
+
+.catalog-filter__dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    border-radius: 0rem 0rem 0.6rem 0.6rem;
+
+    .catalog-filter__customCheckbox {
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        max-height: max-content;
-        overflow-y: auto;
-        z-index: 1;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background: #FEFDFD;
-        box-shadow: 0px 0.2rem 1rem rgba(79, 73, 69, 0.15);
-        border-radius: 0.6rem;
-        display: none;
+        z-index: -1;
+        opacity: 0;
     }
 
-    .catalog-options__container.activeArrow {
-        display: block;
-    }
-
-    .catalog-option__item {
-        padding: 1rem;
+    /* для элемента label, связанного с .custom-checkbox */
+    .catalog-filter__customCheckbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #4F4A45;
+        display: flex;
+        gap: 1rem;
         cursor: pointer;
-        width: 100%;
-
-        .container {
-            display: block;
-            position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        /* Hide the browser's default checkbox */
-        .container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-
-        /* Create a custom checkbox */
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: #eee;
-        }
-
-        /* On mouse-over, add a grey background color */
-        .container:hover input~.checkmark {
-            background-color: #ccc;
-        }
-
-        /* When the checkbox is checked, add a blue background */
-        .container input:checked~.checkmark {
-            background-color: #2196F3;
-        }
-
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-
-        /* Show the checkmark when checked */
-        .container input:checked~.checkmark:after {
-            display: block;
-        }
-
-        /* Style the checkmark/indicator */
-        .container .checkmark:after {
-            left: 9px;
-            top: 5px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
+        padding: 1.3rem 1.6rem;
     }
 
-    .catalog-option__item:hover {
-        background-color: #f2f2f2;
+    /* создание в label псевдоэлемента before со следующими стилями */
+    .catalog-filter__customCheckbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 0.1rem solid #4F4A45;
+        border-radius: 0.6rem;
     }
+
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .catalog-filter__customCheckbox:checked+label::before {
+        border-color: #785D4C;
+        background: #785D4C;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 70%;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .catalog-filter__customCheckbox:disabled+label::before {
+        background-color: #e9ecef;
+    }
+}
+
+.catalog-filter__dropdownContent div {
+    text-decoration: none;
+    display: block;
+}
+
+.catalog-filter__dropdownContent div:hover {
+    background-color: #f1f1f1;
+}
+
+.catalog-filter__dropdown.show .catalog-filter__dropdownContent {
+    display: block;
 }

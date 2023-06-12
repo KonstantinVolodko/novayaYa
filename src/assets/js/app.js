@@ -80,39 +80,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    document.querySelector('.catalog-filter__dropdownBtn').addEventListener('click', function () {
+        var dropdown = this.parentElement;
+        dropdown.classList.toggle('show');
+    });
 
-    const selectInput = document.querySelector(".catalog-select__input");
-    const selectedOption = document.querySelector(".catalog-selected__option");
-    const arrow = document.querySelector(".arrow");
-    const optionsContainer = document.querySelector(".catalog-options__container");
+    window.addEventListener('click', function (event) {
+        var dropdowns = document.getElementsByClassName('catalog-filter__dropdown');
+        for (var i = 0; i < dropdowns.length; i++) {
+            var dropdown = dropdowns[i];
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        }
+    });
 
-    const optionsList = document.querySelectorAll(".catalog-option__item");
+    let filterCheckbox = document.querySelectorAll('.catalog-filter__checkbox')
 
-    if (selectInput !== null) {
-        selectInput.addEventListener("click", () => {
-            optionsContainer.classList.toggle("activeArrow");
-            arrow.classList.toggle("activeArrow");
-        });
-    }
-
-    if (optionsList !== null) {
-        optionsList.forEach((option) => {
-            option.addEventListener("click", () => {
-                selectedOption.innerHTML = option.innerHTML;
-                optionsContainer.classList.remove("activeArrow");
-                arrow.classList.remove("activeArrow");
-            });
-        });
-    }
-
-    // document.addEventListener("click", (event) => {
-    //     const isClickInside = selectInput.contains(event.target);
-    //     if (!isClickInside) {
-    //         optionsContainer.classList.remove("active");
-    //         arrow.classList.remove("active");
-    //     }
-    // });
-
+    filterCheckbox.forEach(e => {
+        e.addEventListener('click', () => {
+            if (e.children[0].checked) {
+                console.log('заебись')
+            }else {
+                console.log('хуета')
+            }
+        })
+    })
 
     let thumbnailSwiper = new Swiper('.thumbnails', {
         direction: 'horizontal',
@@ -196,41 +189,45 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     const postOfficeRadioBtn = document.querySelectorAll('.postOffice-items__radio');
-const shippingMethods = document.querySelector('.postOffice-items__shippingMethods');
+    const shippingMethods = document.querySelector('.postOffice-items__shippingMethods');
 
-const handleShippingMethodClick = (e) => {
-  shippingMethods.innerHTML = e.nextElementSibling.innerHTML;
-  const shippingMethodsBtns = shippingMethods.querySelectorAll('.postOffice-items__radio_mob');
-  const shippingMethodsHelper = shippingMethods.querySelector('.postOffice-items__helperContaiener');
+    const handleShippingMethodClick = (e) => {
+        shippingMethods.innerHTML = e.nextElementSibling.innerHTML;
+        const shippingMethodsBtns = shippingMethods.querySelectorAll('.postOffice-items__radio_mob');
+        const shippingMethodsHelper = shippingMethods.querySelector('.postOffice-items__helperContaiener');
 
-  shippingMethodsBtns.forEach((el) => {
-    el.addEventListener('click', () => {
-      if (window.matchMedia("(min-width: 650px)").matches) {
-        shippingMethodsBtns.forEach((elem) => {
-          elem.classList.remove('btnTabActive');
+        shippingMethodsBtns.forEach((el) => {
+            el.addEventListener('click', () => {
+                if (window.matchMedia("(min-width: 650px)").matches) {
+                    shippingMethodsBtns.forEach((elem) => {
+                        elem.classList.remove('btnTabActive');
+                    });
+                    el.classList.add('btnTabActive');
+                }
+                shippingMethodsHelper.innerHTML = el.nextElementSibling.innerHTML;
+            });
         });
-        el.classList.add('btnTabActive');
-      }
-      shippingMethodsHelper.innerHTML = el.nextElementSibling.innerHTML;
+
+        shippingMethodsBtns[0].click();
+
+        shippingMethods.classList.remove('tabAnimation');
+        setTimeout(() => {
+            shippingMethods.classList.add('tabAnimation');
+        }, 0);
+    };
+
+    postOfficeRadioBtn.forEach((e, index) => {
+        const radioInput = e.querySelector('input');
+        if (index === 0) {
+            radioInput.setAttribute('checked', 'true');
+        }
+
+        e.addEventListener('click', () => {
+            handleShippingMethodClick(e);
+        });
     });
-  });
 
-  shippingMethodsBtns[0].click();
-};
-
-postOfficeRadioBtn.forEach((e, index) => {
-  const radioInput = e.querySelector('input');
-  if (index === 0) {
-    radioInput.setAttribute('checked', 'true');
-  }
-
-  e.addEventListener('click', () => {
-    handleShippingMethodClick(e);
-  });
-});
-
-postOfficeRadioBtn[0].click();
-
+    // postOfficeRadioBtn[0].click();
 
 
 

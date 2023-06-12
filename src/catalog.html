@@ -8,24 +8,57 @@
 
 <section class="catalog pageContainer">
     <div class="catalog-filter">
-        <div class="catalog-select">
-            <div class="catalog-select__input">
-                <span class="catalog-selected__option">Тип товара</span>
-                <i class="arrow"></i>
+        <div class="catalog-filter__position">
+            <div class="catalog-filter__dropdown">
+                <button class="catalog-filter__dropdownBtn">Тип товара</button>
+                <div class="catalog-filter__dropdownContent">
+                    <div class="catalog-filter__checkbox">
+                        <input class="catalog-filter__customCheckbox" type="checkbox" id="earrings" name="decorations" value="earrings">
+                        <label for="earrings">Серьги</label>
+                    </div>
+                    <div class="catalog-filter__checkbox">
+                        <input class="catalog-filter__customCheckbox" type="checkbox" id="pendants" name="decorations" value="pendants">
+                        <label for="pendants">Подвески</label>
+                    </div>
+                    <div class="catalog-filter__checkbox">
+                        <input class="catalog-filter__customCheckbox" type="checkbox" id="rings" name="decorations" value="rings">
+                        <label for="rings">Кольца</label>
+                    </div>
+                    <div class="catalog-filter__checkbox">
+                        <input class="catalog-filter__customCheckbox" type="checkbox" id="brooches" name="decorations" value="brooches">
+                        <label for="brooches">Броши</label>
+                    </div>
+                    <div class="catalog-filter__checkbox">
+                        <input class="catalog-filter__customCheckbox" type="checkbox" id="bracelets" name="decorations" value="bracelets">
+                        <label for="bracelets">Браслеты</label>
+                    </div>
+                    <div class="catalog-filter__checkbox">
+                        <input class="catalog-filter__customCheckbox" type="checkbox" id="kits" name="decorations" value="kits">
+                        <label for="kits">Комплекты</label>
+                    </div>
+                </div>
             </div>
-            <ul class="catalog-options__container">
-                <li class="catalog-option__item">
-                    <label class="container">One
-                        <input type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
-                    </label>
-                </li>
-                <li class="catalog-option__item">Option 2</li>
-                <li class="catalog-option__item">Option 3</li>
-                <li class="catalog-option__item">Option 4</li>
-                <li class="catalog-option__item">Option 5</li>
-            </ul>
+    
+            <div class="catalog-filter__closeContainer">
+                <div class="catalog-filter__closeBtn">
+                    <p>Серьги</p>
+                    <svg>
+                        <use href="#crossIco"></use>
+                    </svg>
+                </div>
+
+                <div class="catalog-filter__closeBtn">
+                    <p>Серьги</p>
+                    <svg>
+                        <use href="#crossIco"></use>
+                    </svg>
+                </div>
+            </div>
         </div>
+
+        <button class="catalog-filter__clearBtn">
+            Сбросить фильтр
+        </button>
     </div>
 
     <ul>
@@ -34,16 +67,16 @@
                 <a href="#" class="catalog-item__content">
                     <div class="swiper changeColorSwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item1.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item1.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item2.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item2.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
                         </div>
                     </div>
 
@@ -78,16 +111,16 @@
                 <a href="#" class="catalog-item__content">
                     <div class="swiper changeColorSwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item1.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item1.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item2.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item2.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
                         </div>
                     </div>
 
@@ -121,16 +154,16 @@
                 <a href="#" class="catalog-item__content">
                     <div class="swiper changeColorSwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item1.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item1.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item2.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item2.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
                         </div>
                     </div>
 
@@ -164,16 +197,16 @@
                 <a href="#" class="catalog-item__content">
                     <div class="swiper changeColorSwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item1.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item1.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="main-recommendations__imgContainer">
-                                <img src="./assets/images/main/item2.jpg" alt="#">
+                            <div class="swiper-slide">
+                                <div class="main-recommendations__imgContainer">
+                                    <img src="./assets/images/main/item2.jpg" alt="#">
+                                </div>
                             </div>
-                          </div>
                         </div>
                     </div>
 
@@ -204,3 +237,5 @@
         </li>
     </ul>
 </section>
+
+<div class="bottomMargin"></div>
