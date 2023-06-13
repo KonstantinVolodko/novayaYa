@@ -1,0 +1,29 @@
+<button id="entranceBtn">Открыть модальное окно</button>
+
+<div id="entranceModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-content__title">Вход</p>
+        <p class="modal-content__subtitle">
+            Еще нет аккаунта?
+            <button>Регистрация</button>
+        </p>
+
+        <form action="#">
+            <input type="email" name="mail" placeholder="E-mail*">
+            <div class="passwordRecovery-content__input">
+                <input type="text" name="oldPassword" placeholder="Пароль">
+                <button>
+                    <svg>
+                        <use href="#hidePassword"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <input type="submit" class="modal-content__submit" value="Вход">
+            <button class="modal-content__redBtn">
+                Не помните пароль?
+            </button>
+        </form>
+    </div>
+</div>

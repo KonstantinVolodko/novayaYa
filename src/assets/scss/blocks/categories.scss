@@ -1,6 +1,7 @@
 .breadCrumbs {
     padding-top: 4rem;
     padding-left: 2rem;
+    padding-bottom: 4rem;
     display: flex;
     gap: 0.6rem;
 
@@ -10,7 +11,8 @@
     color: #AAA49E;
 
     @include breakpoint($lb-bp) {
-        padding-top: 1rem;
+        padding-top: 2.9rem;
+        padding-bottom: 1.6rem;
     }
 
     @include breakpoint($sm-bp) {

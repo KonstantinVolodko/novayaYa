@@ -1,0 +1,32 @@
+<button id="registrationBtn">Открыть модальное окно</button>
+
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-content__title">Регистрация</p>
+        <p class="modal-content__subtitle">
+            Уже есть аккаунт?
+            <button>Войти</button>
+        </p>
+
+        <form action="#">
+            <input type="text" name="name" placeholder="Имя*">
+            <input type="email" name="mail" placeholder="E-mail*">
+            <input type="tel" name="phone" placeholder="Телефон">
+            <div class="passwordRecovery-content__input">
+                <input type="text" name="oldPassword" placeholder="Подтверждение пароля">
+                <button>
+                    <svg>
+                        <use href="#hidePassword"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="basket-order__agreement">
+                <input class="basket-order__agreement_checkBox" type="checkbox" id="agreementCheckbox" name="agreement">
+                <label for="agreementCheckbox">Согласие на обработку персональных данных</label>
+            </div>
+
+            <input type="submit" class="modal-content__submit" value="Регистрация">
+        </form>
+    </div>
+</div>

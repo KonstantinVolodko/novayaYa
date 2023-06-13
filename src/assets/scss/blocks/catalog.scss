@@ -40,14 +40,44 @@
         justify-content: space-between;
         align-items: center;
 
+        
+        @include breakpoint($xl-bp) {
+            flex-direction: column;
+            align-items: baseline;
+            gap: 3rem;
+        }
+
+        @include breakpoint($sm-bp) {
+            gap: 2rem;
+        }
+
         .catalog-filter__position {
             display: flex;
             align-items: center;
             gap: 2.4rem;
 
+            @include breakpoint($xl-bp) {
+                flex-direction: column;
+                align-items: baseline;
+                gap: 1.4rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
+
             .catalog-filter__closeContainer {
                 display: flex;
                 gap: 1.6rem;
+
+                @include breakpoint($xl-bp) {
+                    min-height: 4rem;
+                }
+
+                @include breakpoint($sm-bp) {
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                }
 
                 .catalog-filter__closeBtn {
                     display: flex;
@@ -57,23 +87,33 @@
                     border-radius: 3.2rem;
                     padding: 0.5rem 1.2rem;
                     cursor: pointer;
-        
+
                     p {
                         font-weight: 400;
                         font-size: 1.8rem;
                         line-height: 2.5rem;
                         color: #4F4A45;
+
+                        @include breakpoint($sm-bp) {
+                            font-size: 1.2rem;
+                            line-height: 1.6rem;
+                        }
                     }
-        
+
                     svg {
-                        width: 1rem;
-                        height: 1rem;
+                        width: 1.3rem;
+                        height: 1.3rem;
+
+                        @include breakpoint($sm-bp) {
+                            width: 1rem;
+                            height: 1rem;
+                        }
                     }
                 }
             }
         }
 
-        
+
 
         .catalog-filter__clearBtn {
             font-weight: 400;
@@ -83,6 +123,12 @@
             color: #4F4A45;
             background: none;
             border: none;
+            padding: 0rem;
+
+            @include breakpoint($sm-bp) {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
         }
 
     }
@@ -93,6 +139,10 @@
 .catalog-filter__dropdown {
     position: relative;
     display: inline-block;
+
+    @include breakpoint($sm-bp) {
+        width: 100%;
+    }
 }
 
 .catalog-filter__dropdownBtn {
@@ -105,6 +155,22 @@
     background: #FEFDFD;
     border-radius: 0.6rem;
     border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 28.2rem;
+
+    @include breakpoint($sm-bp) {
+       width: 100%;
+       font-size: 1.6rem;
+       line-height: 2.2rem;
+    }
+
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: transparent;
+    }
 }
 
 .catalog-filter__dropdownContent {
@@ -122,7 +188,6 @@
         opacity: 0;
     }
 
-    /* для элемента label, связанного с .custom-checkbox */
     .catalog-filter__customCheckbox+label {
         display: inline-flex;
         align-items: center;
@@ -135,9 +200,12 @@
         gap: 1rem;
         cursor: pointer;
         padding: 1.3rem 1.6rem;
+
+        @include breakpoint($sm-bp) {
+            padding: 0.7rem 1.6rem;
+        }
     }
 
-    /* создание в label псевдоэлемента before со следующими стилями */
     .catalog-filter__customCheckbox+label::before {
         content: '';
         display: inline-block;
@@ -149,7 +217,6 @@
         border-radius: 0.6rem;
     }
 
-    /* стили для чекбокса, находящегося в состоянии checked */
     .catalog-filter__customCheckbox:checked+label::before {
         border-color: #785D4C;
         background: #785D4C;
@@ -159,7 +226,6 @@
         background-size: 70%;
     }
 
-    /* стили для чекбокса, находящегося в состоянии disabled */
     .catalog-filter__customCheckbox:disabled+label::before {
         background-color: #e9ecef;
     }
@@ -176,4 +242,41 @@
 
 .catalog-filter__dropdown.show .catalog-filter__dropdownContent {
     display: block;
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: all 0.2s linear;
 }

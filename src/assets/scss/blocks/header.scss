@@ -1,6 +1,6 @@
 header {
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     transition: all 0.2s linear;
     width: 100%;
     z-index: 10;
@@ -37,6 +37,7 @@ header {
         height: 100%;
         padding: 2rem 0rem 0rem 1.6rem;
         transition: all 0.4s linear;
+        z-index: 10;
 
         @include breakpoint($lb-bp) {
             width: 100%;
@@ -283,7 +284,7 @@ header {
     padding-left: 21rem;
     padding-right: 21rem;
     padding-top: 2.6rem;
-    padding-bottom: 5rem;
+    // padding-bottom: 5rem;
 
     @include breakpoint($xl-bp) {
         padding-left: 2rem;
@@ -292,7 +293,7 @@ header {
     }
 
     @include breakpoint($sm-bp) {
-        padding-bottom: 2rem;
+        // padding-bottom: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -301,4 +302,11 @@ header {
 .header-menu__show {
     left: 0% !important;
     transition: all 0.4s linear;
+}
+
+.headerAbsolute {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
 }

@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let mainSwiper = new Swiper(".main-swiper", {
+        grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -80,32 +81,82 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    document.querySelector('.catalog-filter__dropdownBtn').addEventListener('click', function () {
-        var dropdown = this.parentElement;
-        dropdown.classList.toggle('show');
-    });
+    if (document.querySelector('.catalog-filter__dropdownBtn') !== null) {
+        document.querySelector('.catalog-filter__dropdownBtn').addEventListener('click', function () {
+            let dropdown = this.parentElement;
+            dropdown.classList.toggle('show');
+            this.querySelector('svg').classList.toggle('rotate')
+        });
+    }
 
     window.addEventListener('click', function (event) {
-        var dropdowns = document.getElementsByClassName('catalog-filter__dropdown');
-        for (var i = 0; i < dropdowns.length; i++) {
-            var dropdown = dropdowns[i];
+        let dropdowns = document.getElementsByClassName('catalog-filter__dropdown');
+        for (let i = 0; i < dropdowns.length; i++) {
+            let dropdown = dropdowns[i];
             if (!dropdown.contains(event.target)) {
                 dropdown.classList.remove('show');
+                dropdown.querySelector('svg').classList.remove('rotate')
             }
         }
     });
 
-    let filterCheckbox = document.querySelectorAll('.catalog-filter__checkbox')
+    let filterCheckbox = document.querySelectorAll('.catalog-filter__checkbox');
+    let closeContainer = document.querySelector('.catalog-filter__closeContainer');
+    let clearBtn = document.querySelector('.catalog-filter__clearBtn');
 
     filterCheckbox.forEach(e => {
-        e.addEventListener('click', () => {
+        e.addEventListener('change', () => {
             if (e.children[0].checked) {
-                console.log('заебись')
-            }else {
-                console.log('хуета')
+                let contentItem = document.createElement("div");
+                contentItem.classList.add('catalog-filter__closeBtn');
+                let contentHTML = `<p>${e.children[1].innerHTML}</p>
+                      <svg>
+                          <use href="#crossIco"></use>
+                      </svg>`;
+                contentItem.innerHTML = contentHTML;
+                closeContainer.appendChild(contentItem);
+
+                contentItem.classList.add('fadeIn');
+
+                contentItem.addEventListener('click', () => {
+                    contentItem.classList.add('fadeOut');
+                    setTimeout(() => {
+                        closeContainer.removeChild(contentItem);
+                        e.children[0].checked = false;
+                    }, 500);
+                });
+
+                e.addEventListener('change', () => {
+                    if (!e.children[0].checked && closeContainer.contains(contentItem)) {
+                        contentItem.classList.add('fadeOut');
+                        setTimeout(() => {
+                            closeContainer.removeChild(contentItem);
+                        }, 500);
+                    }
+                });
+            } else {
+                let contentItem = e.nextElementSibling;
+                if (closeContainer.contains(contentItem)) {
+                    closeContainer.removeChild(contentItem);
+                }
             }
-        })
-    })
+        });
+    });
+
+    if (clearBtn !== null) {
+        clearBtn.addEventListener('click', async () => {
+            filterCheckbox.forEach(e => {
+                e.children[0].checked = false;
+            });
+
+            let contentItems = closeContainer.querySelectorAll('.catalog-filter__closeBtn');
+            for (let i = 0; i < contentItems.length; i++) {
+                contentItems[i].classList.add('fadeOut');
+                await new Promise(resolve => setTimeout(resolve, 500));
+                closeContainer.removeChild(contentItems[i]);
+            }
+        });
+    }
 
     let thumbnailSwiper = new Swiper('.thumbnails', {
         direction: 'horizontal',
@@ -133,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let additiveSwiper = new Swiper('.additiveSwiper', {
         slidesPerView: 2,
-        // spaceBetween: 16,
+        spaceBetween: 16,
         navigation: {
             nextEl: ".additiveSwiper-arrow_right",
             prevEl: ".additiveSwiper-arrow_left",
@@ -227,9 +278,47 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // postOfficeRadioBtn[0].click();
+    if (postOfficeRadioBtn[0]) {
+        postOfficeRadioBtn[0].click();
+    }
 
+    class Modal {
+        constructor(modalId, openButtonId) {
+            this.modal = document.getElementById(modalId);
+            this.openButton = document.getElementById(openButtonId);
 
+            this.openButton.addEventListener('click', () => {
+                this.open();
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === this.modal) {
+                    this.close();
+                }
+            });
+
+            const closeButton = this.modal.querySelector('.close');
+            closeButton.addEventListener('click', () => {
+                this.close();
+            });
+        }
+
+        open() {
+            this.modal.style.display = 'block';
+            setTimeout(() => {
+                this.modal.classList.add('open');
+            }, 10);
+        }
+
+        close() {
+            this.modal.classList.remove('open');
+            setTimeout(() => {
+                this.modal.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    // const registrationModal = new Modal('registrationModal', 'registrationBtn');
 
 })
 
