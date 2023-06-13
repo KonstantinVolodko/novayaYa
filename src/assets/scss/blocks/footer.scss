@@ -45,6 +45,8 @@
         .footer-content__catalog {
             @include breakpoint($lb-bp) {
                 margin-top: 2rem;
+                border-bottom: 0.1rem solid #4F4A45;
+                border-top: 0.1rem solid #4F4A45;
             }
         }
 
@@ -68,9 +70,6 @@
                 font-size: 1.8rem;
                 line-height: 3.7rem;
                 color: #4F4A45;
-                border-width: 0.1rem 0px;
-                border-style: solid;
-                border-color: #4F4A45;
                 padding: 0 0.8rem;
             }
         }
@@ -86,7 +85,7 @@
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.2s ease-out;
-                margin-top: 1rem;
+                margin-top: 0rem;
             }
             
             a {
@@ -168,6 +167,7 @@
 .footer-content__information {
     @include breakpoint($lb-bp) {
         order: 1;
+        border-bottom: 0.1rem solid #4F4A45;
     }
 }
 

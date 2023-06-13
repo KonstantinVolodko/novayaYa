@@ -982,26 +982,7 @@
         
             <div class="header-menu">
                 <button class="header-menu__cross"></button>
-                <ul>
-                    <li>
-                        <a href="#">Украшения</a>
-                    </li>
-                    <li>
-                        <a href="#">Аксессуары для волос</a>
-                    </li>
-                    <li>
-                        <a href="#">Коллекции</a>
-                    </li>
-                    <li>
-                        <a href="#">О компании</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="#">Оплата и доставка</a>
-                    </li>
-                </ul>
+                <ul></ul>
                 
                 <div class="header-menu__searchContainer">
                     <button>
@@ -1314,6 +1295,108 @@
                 <p>© 2022. Интернет-магазин бижутерии Novaya Ya. Все права защищены</p>
             </div>
         </footer>
+        
+        <div id="consultationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modal-content__title">Нужна консультация?</p>
+                <p class="modal-content__subtitle">
+                    Заполните форму ниже и мы свяжемся с вами
+                </p>
+        
+                <form action="#">
+                    <input type="text" name="name" placeholder="Имя*">
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="email" name="mail" placeholder="E-mail*">
+                    <input type="text" name="comment" placeholder="Комментарий">
+                    <div class="basket-order__agreement">
+                        <input class="basket-order__agreement_checkBox" type="checkbox" id="agreementCheckbox" name="agreement">
+                        <label for="agreementCheckbox">Согласие на обработку персональных данных</label>
+                    </div>
+                    <input type="submit" class="modal-content__submit" value="оставить заявку">
+                </form>
+            </div>
+        </div>
+        <div id="entranceModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modal-content__title">Вход</p>
+                <p class="modal-content__subtitle">
+                    Еще нет аккаунта?
+                    <button>Регистрация</button>
+                </p>
+        
+                <form action="#">
+                    <input type="email" name="mail" placeholder="E-mail*">
+                    <div class="passwordRecovery-content__input">
+                        <input type="text" name="oldPassword" placeholder="Пароль">
+                        <button>
+                            <svg>
+                                <use href="#hidePassword"></use>
+                            </svg>
+                        </button>
+                    </div>
+        
+                    <input type="submit" class="modal-content__submit" value="Вход">
+                    <button class="modal-content__redBtn">
+                        Не помните пароль?
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div id="registrationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modal-content__title">Восстановление пароля</p>
+                <p class="modal-content__subtitle">
+                    Пожалуйста, введите email, указанный вами при регистрации. Вы получите ссылку для восстановления пароля
+                </p>
+        
+                <form action="#">
+                    <input type="email" name="mail" placeholder="E-mail*">
+                    <input type="submit" class="modal-content__submit" value="Сбросить пароль">
+                </form>
+            </div>
+        </div>
+        <div id="registrationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modal-content__title">Регистрация</p>
+                <p class="modal-content__subtitle">
+                    Уже есть аккаунт?
+                    <button>Войти</button>
+                </p>
+        
+                <form action="#">
+                    <input type="text" name="name" placeholder="Имя*">
+                    <input type="email" name="mail" placeholder="E-mail*">
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <div class="passwordRecovery-content__input">
+                        <input type="text" name="oldPassword" placeholder="Подтверждение пароля">
+                        <button>
+                            <svg>
+                                <use href="#hidePassword"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="basket-order__agreement">
+                        <input class="basket-order__agreement_checkBox" type="checkbox" id="agreementCheckbox" name="agreement">
+                        <label for="agreementCheckbox">Согласие на обработку персональных данных</label>
+                    </div>
+        
+                    <input type="submit" class="modal-content__submit" value="Регистрация">
+                </form>
+            </div>
+        </div>
+        <div id="thanksModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <svg>
+                    <use href="#thanksIco"></use>
+                </svg>
+                <p class="modal-content__title">Спасибо! Данные успешно отправлены</p>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <!-- JS -->

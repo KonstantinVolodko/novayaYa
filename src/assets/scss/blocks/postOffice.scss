@@ -1,3 +1,9 @@
+.postOffice {
+    h2 {
+        font-family: 'Playfair Display';
+    }
+}
+
 .postOffice-items {
 
     display: flex;
@@ -254,11 +260,12 @@
                             &:not(:disabled):not(:checked)+label:hover::before {
                                 border-color: #785D4C;
                                 transition: all 0.2s linear;
+                                
                             }
 
                             &:checked+label::before {
                                 border-color: #785D4C;
-                                background-color: #FFFFFF;
+                                // background-color: #FFFFFF;
                                 transition: all 0.2s linear;
                                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23785D4C'/%3e%3c/svg%3e");
                             }

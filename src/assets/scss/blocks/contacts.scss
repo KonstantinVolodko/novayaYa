@@ -1,5 +1,9 @@
 .contacts {
 
+    h2 {
+        font-family: 'Playfair Display';
+    }
+
     @include breakpoint($sm-bp) {
         margin-top: 1.6rem;
     }

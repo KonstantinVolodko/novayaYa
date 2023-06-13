@@ -10709,14 +10709,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.matchMedia("(max-width: 1024px)").matches) {
         let recommendationsSwiper = new Swiper(".main-recommendations__swiper", {
             slidesPerView: 2,
+            spaceBetween: 16,
             pagination: {
                 el: ".recommendations-swiper-pagination",
-                clickable: true,
+                // clickable: true,
             },
             breakpoints: {
                 650: {
                     slidesPerView: 3,
-                }
+                    spaceBetween: 20,
+                },
             }
         });
     }
@@ -10871,10 +10873,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         silverBtn.addEventListener('click', function () {
             changeColorSwiper.slideTo(0);
+            changeColorSwiper.update();
         });
 
         goldBtn.addEventListener('click', function () {
             changeColorSwiper.slideTo(1);
+            changeColorSwiper.update();
         });
     });
 
@@ -10941,6 +10945,12 @@ document.addEventListener("DOMContentLoaded", () => {
         postOfficeRadioBtn[0].click();
     }
 
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+        let headerMenu = document.querySelector('.header-content__list')
+        let headerMenuMobile = document.querySelector('.header-menu ul')
+        headerMenuMobile.innerHTML = headerMenu.innerHTML
+    }
+
     class Modal {
         constructor(modalId, openButtonId) {
             this.modal = document.getElementById(modalId);
@@ -10978,5 +10988,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // const registrationModal = new Modal('registrationModal', 'registrationBtn');
-
 })

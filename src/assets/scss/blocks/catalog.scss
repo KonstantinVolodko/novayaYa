@@ -70,9 +70,7 @@
                 display: flex;
                 gap: 1.6rem;
 
-                @include breakpoint($xl-bp) {
-                    min-height: 4rem;
-                }
+                
 
                 @include breakpoint($sm-bp) {
                     flex-wrap: wrap;

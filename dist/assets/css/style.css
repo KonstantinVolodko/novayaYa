@@ -540,7 +540,6 @@ body {
 }
 
 h2 {
-    font-family: "Playfair Display";
     font-style: normal;
     font-weight: 400;
     font-size: 6.2rem;
@@ -1846,6 +1845,8 @@ header .header-menu .header-menu__searchContainer input {
 @media (max-width: 650px) {
     .footer-content .footer-content__textContainer .footer-content__catalog {
         margin-top: 2rem;
+        border-bottom: 0.1rem solid #4F4A45;
+        border-top: 0.1rem solid #4F4A45;
     }
 }
 
@@ -1873,9 +1874,6 @@ header .header-menu .header-menu__searchContainer input {
         font-size: 1.8rem;
         line-height: 3.7rem;
         color: #4F4A45;
-        border-width: 0.1rem 0px;
-        border-style: solid;
-        border-color: #4F4A45;
         padding: 0 0.8rem;
     }
 }
@@ -1894,7 +1892,7 @@ header .header-menu .header-menu__searchContainer input {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        margin-top: 1rem;
+        margin-top: 0rem;
     }
 }
 
@@ -1990,6 +1988,7 @@ header .header-menu .header-menu__searchContainer input {
     .footer-content__information {
         -ms-flex-order: 1;
         order: 1;
+        border-bottom: 0.1rem solid #4F4A45;
     }
 }
 
@@ -2691,12 +2690,6 @@ header .header-menu .header-menu__searchContainer input {
     align-items: center;
 }
 
-@media (max-width: 1024px) {
-    .catalog-item .catalog-item__content {
-        margin-right: 2rem;
-    }
-}
-
 @media (max-width: 650px) {
     .catalog-item .catalog-item__content {
         -ms-flex-align: start;
@@ -2706,7 +2699,6 @@ header .header-menu .header-menu__searchContainer input {
 
 @media (max-width: 500px) {
     .catalog-item .catalog-item__content {
-        margin-right: 1.6rem;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 0.8rem;
@@ -3110,12 +3102,6 @@ header .header-menu .header-menu__searchContainer input {
     gap: 1.6rem;
 }
 
-@media (max-width: 1024px) {
-    .catalog .catalog-filter .catalog-filter__position .catalog-filter__closeContainer {
-        min-height: 4rem;
-    }
-}
-
 @media (max-width: 500px) {
     .catalog .catalog-filter .catalog-filter__position .catalog-filter__closeContainer {
         -ms-flex-wrap: wrap;
@@ -3448,6 +3434,10 @@ header .header-menu .header-menu__searchContainer input {
     }
 }
 
+.contacts h2 {
+    font-family: "Playfair Display";
+}
+
 @media (max-width: 500px) {
     .contacts {
         margin-top: 1.6rem;
@@ -3540,6 +3530,10 @@ header .header-menu .header-menu__searchContainer input {
     padding-left: 15.1rem;
     padding-right: 15.1rem;
     margin-top: 4rem;
+}
+
+.delivery h2 {
+    font-family: "Playfair Display";
 }
 
 @media (max-width: 1024px) {
@@ -3743,6 +3737,10 @@ header .header-menu .header-menu__searchContainer input {
     }
 }
 
+.collection h2 {
+    font-family: "Playfair Display";
+}
+
 .collection-content {
     margin-top: 4rem;
     display: -ms-flexbox;
@@ -3860,6 +3858,10 @@ header .header-menu .header-menu__searchContainer input {
     -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 4rem;
+}
+
+.personalArea h2 {
+    font-family: "Playfair Display";
 }
 
 @media (max-width: 500px) {
@@ -4025,6 +4027,7 @@ header .header-menu .header-menu__searchContainer input {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
         gap: 3.6rem;
+        height: 100%;
     }
 }
 
@@ -4398,6 +4401,7 @@ header .header-menu .header-menu__searchContainer input {
 
 .basket h2 {
     text-align: center;
+    font-family: "Playfair Display";
 }
 
 .basket-items {
@@ -4988,6 +4992,10 @@ header .header-menu .header-menu__searchContainer input {
     background-color: #e9ecef;
 }
 
+.postOffice h2 {
+    font-family: "Playfair Display";
+}
+
 .postOffice-items {
     display: -ms-flexbox;
     display: flex;
@@ -5297,7 +5305,6 @@ header .header-menu .header-menu__searchContainer input {
 
     .postOffice-items .postOffice-items__shippingMethods ul li .postOffice-items__radio_mob .postOffice-items__custom-radio:checked + label::before {
         border-color: #785D4C;
-        background-color: #FFFFFF;
         transition: all 0.2s linear;
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23785D4C'/%3e%3c/svg%3e");
     }
@@ -5556,6 +5563,10 @@ header .header-menu .header-menu__searchContainer input {
 
 .emptyBasket {
     margin-top: 4rem;
+}
+
+.emptyBasket h2 {
+    font-family: "Playfair Display";
 }
 
 .emptyBasket .emptyBasket-content {
@@ -5823,7 +5834,7 @@ header .header-menu .header-menu__searchContainer input {
 
 @media (max-width: 500px) {
     .passwordRecovery .passwordRecovery-content form .passwordRecovery-content__changeBtn {
-        margin-top: 3.8rem;
+        margin-top: 2rem;
     }
 }
 
@@ -5856,7 +5867,7 @@ header .header-menu .header-menu__searchContainer input {
 }
 
 .passwordRecovery-content__input input {
-    margin-top: 0rem;
+    margin-top: 0rem !important;
     width: 100%;
 }
 
@@ -5866,7 +5877,7 @@ header .header-menu .header-menu__searchContainer input {
     position: absolute;
     padding: 0rem;
     z-index: 2;
-    margin-top: 0rem;
+    margin-top: 0rem !important;
     right: 1.6rem;
     top: 50%;
     -webkit-transform: translate(0%, -50%);

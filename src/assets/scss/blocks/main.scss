@@ -573,16 +573,16 @@
     align-items: center;
     
 
-    @include breakpoint($xl-bp) {
-        margin-right: 2rem;
-    }
+    // @include breakpoint($xl-bp) {
+    //     margin-right: 2rem;
+    // }
 
     @include breakpoint($lb-bp) {
         align-items: flex-start;
     }
     
     @include breakpoint($sm-bp) {
-        margin-right: 1.6rem;
+        // margin-right: 1.6rem;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 0.8rem;

@@ -24,6 +24,7 @@
         @include breakpoint($sm-bp) {
             flex-direction: column-reverse;
             gap: 3.6rem;
+            height: 100%;
         }
     }
 
